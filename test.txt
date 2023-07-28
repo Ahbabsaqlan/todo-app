@@ -6,3 +6,8 @@ content-type: application/json
     "todo": "Setup backend",
     "status": "Done"
 }
+GET http://localhost:3000/api/todos/ HTTP/1.1
+
+DELETE http://localhost:3000/api/todos/64ba8332b886f36e1c7f4ffa HTTP/1.1
+###
+GET http://localhost:3000/api/todos/ HTTP/1.1

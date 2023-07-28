@@ -1,16 +1,17 @@
 // app.js
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const { Int32 } = require('mongodb');
 
 // Replace 'YOUR_MONGODB_URI' with your actual MongoDB connection string
 const mongoURI = 'mongodb+srv://ahbabzami3:azamicalo@todo-app.2fkraaj.mongodb.net/?retryWrites=true&w=majority';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: false })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log('MongoDB connection error:', err));
 
 const todoSchema = new mongoose.Schema({
-  id: Number,
   todo: String,
   status: String,
 });
